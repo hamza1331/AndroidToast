@@ -17,7 +17,7 @@ export default class App extends Component {
   handleClick(){
     if(Platform.OS==='android'){
       ToastAndroid.showWithGravityAndOffset(
-        'We are learning!!',
+        'Mobile App is Awesome!!',
         ToastAndroid.LONG,
         ToastAndroid.BOTTOM,
         25,
@@ -27,9 +27,15 @@ export default class App extends Component {
   }
   render() {
     return (
-      <View style={{flex:1,justifyContent:"center",alignItems:"center",backgroundColor:"#383837"}}>
-        <TouchableOpacity style={{backgroundColor:"darkred",width:130,height:70,justifyContent:"center",alignItems:"center",borderRadius:40}} onPress={this.handleClick}>
-          <Text style={{color:"white",fontSize:22}}>Touch me!</Text></TouchableOpacity>
+      <View style={{flex:1,justifyContent:"center",alignItems:"center",backgroundColor:"#2c362e"}}>
+        <TouchableOpacity style={{backgroundColor:"darkgreen",width:130,height:70,justifyContent:"center",alignItems:"center",borderRadius:10}} onPress={this.handleClick}>
+          <Text style={{color:"white",fontSize:22}}>Touch here</Text></TouchableOpacity>
+        <TouchableOpacity style={{backgroundColor:"darkblue",width:130,height:70,justifyContent:"center",alignItems:"center",borderRadius:10,marginTop:10}} onPress={this.handleClick}>
+          <Text style={{color:"white",fontSize:22}}>Tap here</Text></TouchableOpacity>
+        <TouchableOpacity style={{backgroundColor:"darkred",width:130,height:70,justifyContent:"center",alignItems:"center",borderRadius:10,marginTop:10}} onPress={this.handleClick}>
+          <Text style={{color:"white",fontSize:22}}>Click here</Text></TouchableOpacity>
+        <TouchableOpacity style={{backgroundColor:"darkcyan",width:130,height:70,justifyContent:"center",alignItems:"center",borderRadius:10,marginTop:10}} onPress={this.handleClick}>
+          <Text style={{color:"white",fontSize:22,textAlign:"center"}}>What's inside?</Text></TouchableOpacity>
       </View>
     );
   }
